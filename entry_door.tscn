@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bmg5fpw5y3jwi"]
+
+[ext_resource type="Script" uid="uid://v6w2mdvdt7b6" path="res://Assets/entry_door_model.gd" id="2_w5smd"]
+[ext_resource type="PackedScene" uid="uid://cqv1pkeu64o3j" path="res://Assets/entry_door_model.tscn" id="2_ypo4b"]
+[ext_resource type="PackedScene" uid="uid://ggiye6q2k845" path="res://Assets/door_frame.glb" id="3_riiig"]
+
+[sub_resource type="Animation" id="Animation_ypo4b"]
+length = 0.001
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hinge")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.7071068, 0, 0, 0.7071067)
+
+[sub_resource type="Animation" id="Animation_w5smd"]
+resource_name = "close"
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hinge")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.5440085, -0.45172402, 0.45172405, 0.54400855, 1, 1, 0.70710665, 0, 0, 0.7071067)
+
+[sub_resource type="Animation" id="Animation_riiig"]
+resource_name = "open"
+tracks/0/type = "rotation_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("hinge")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.7071068, 0, 0, 0.7071067, 1, 1, 0.5440085, -0.45172405, 0.45172408, 0.54400855)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_4tm8n"]
+_data = {
+&"RESET": SubResource("Animation_ypo4b"),
+&"close": SubResource("Animation_w5smd"),
+&"open": SubResource("Animation_riiig")
+}
+
+[node name="door" type="Node3D" unique_id=1409562789]
+transform = Transform3D(0.3, 0, 0, 0, 0.32932398, 0, 0, 0, 0.3, 0, 0, 0)
+
+[node name="door_frame" parent="." unique_id=828458539 instance=ExtResource("3_riiig")]
+transform = Transform3D(1.5075305e-15, -3.934025e-08, 0.95, -0.789, -3.934025e-08, -4.5168454e-22, 3.4488284e-08, -0.9, -4.152582e-08, 0.037932385, 4.3947754, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1385799074]
+libraries/ = SubResource("AnimationLibrary_4tm8n")
+
+[node name="hinge" type="Node3D" parent="." unique_id=139451696]
+transform = Transform3D(0.99999976, 0, 0, 0, -4.3711378e-08, -0.9999997, 0, 0.99999976, -4.3711374e-08, 3.487864, 4.239332, 0)
+
+[node name="entry_door" parent="hinge" unique_id=1128062760 instance=ExtResource("2_ypo4b")]
+transform = Transform3D(-4.3711385e-08, 0, 0.99999994, -3.5527137e-15, 0.99999994, -2.1175824e-22, -1.0000001, -7.1054274e-15, -4.3711392e-08, -3.4548166, 0.00670929, 0.11841774)
+script = ExtResource("2_w5smd")

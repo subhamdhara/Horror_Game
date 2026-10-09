@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://du7711ls5to0s"]
+
+[ext_resource type="PackedScene" uid="uid://dncqddpcepqyq" path="res://house_meh.tscn" id="2_ioq17"]
+[ext_resource type="PackedScene" uid="uid://cdk6hwb4hi2wc" path="res://Player/player.tscn" id="2_pm7ks"]
+[ext_resource type="PackedScene" uid="uid://3eh4ris27fla" path="res://door.tscn" id="3_ioq17"]
+[ext_resource type="PackedScene" uid="uid://bmg5fpw5y3jwi" path="res://entry_door.tscn" id="4_tk0lt"]
+[ext_resource type="PackedScene" uid="uid://6fu4f1ntdchg" path="res://Assets/sofa.tscn" id="5_lc66q"]
+[ext_resource type="PackedScene" uid="uid://d1rc2iqo044fi" path="res://Assets/desk.tscn" id="6_a8yms"]
+[ext_resource type="Script" uid="uid://cc2hiashmhaqp" path="res://label.gd" id="7_c5mqo"]
+
+[sub_resource type="Environment" id="Environment_fbp47"]
+background_mode = 2
+ambient_light_color = Color(1, 1, 1, 1)
+ambient_light_energy = 0.0
+reflected_light_source = 2
+ssr_max_steps = 54
+ssr_fade_in = 0.27037507
+ssr_depth_tolerance = 0.01
+sdfgi_use_occlusion = true
+sdfgi_bounce_feedback = 0.29
+glow_enabled = true
+glow_bloom = 0.48
+volumetric_fog_density = 0.375
+volumetric_fog_albedo = Color(0.29249403, 0.29866365, 0.28514248, 1)
+
+[node name="levl" type="Node3D" unique_id=1056410928]
+
+[node name="Player" parent="." unique_id=1009815317 instance=ExtResource("2_pm7ks")]
+transform = Transform3D(-0.75919706, 0, -0.6508608, 0, 1, 0, 0.6508608, 0, -0.75919706, -1.4254348, 0.56027603, -7.6864686)
+speed = 9.0
+acceleration = 182.0
+jump_height = 1.5
+
+[node name="house" parent="." unique_id=1890650441 instance=ExtResource("2_ioq17")]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 1.3254299, -0.39342856, -0.8280513)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=225067763]
+environment = SubResource("Environment_fbp47")
+
+[node name="door3" parent="." unique_id=1409562789 instance=ExtResource("3_ioq17")]
+transform = Transform3D(-1.4192266e-08, 0, -0.3, 0, 0.3, 0, 0.3246812, 0, -1.3113417e-08, 0.94729125, 0.66278756, 1.9836287)
+
+[node name="door2" parent="." unique_id=1305960084 instance=ExtResource("3_ioq17")]
+transform = Transform3D(-1.136982e-08, 0, 0.3, 0, 0.28231627, 0, -0.26011112, 0, -1.3113417e-08, 5.0344434, 0.6627877, 7.606392)
+
+[node name="door" parent="." unique_id=1724971890 instance=ExtResource("3_ioq17")]
+transform = Transform3D(-1.21238175e-08, 0, -0.3, 0, 0.28887156, 0, 0.27736062, 0, -1.3113417e-08, 1.5983359, 0.66278744, -4.158786)
+
+[node name="door4" parent="." unique_id=960831647 instance=ExtResource("3_ioq17")]
+transform = Transform3D(-1.1459011e-08, 0, 0.3, 0, 0.2866168, 0, -0.26215163, 0, -1.3113417e-08, 5.0512643, 0.66278756, -8.5299225)
+
+[node name="door5" parent="." unique_id=847936138 instance=ExtResource("3_ioq17")]
+transform = Transform3D(-1.1981898e-08, 0, 0.3, 0, 0.27944097, 0, -0.2741139, 0, -1.3113417e-08, 5.017988, 0.66278774, -3.7888572)
+
+[node name="door6" parent="." unique_id=122039461 instance=ExtResource("4_tk0lt")]
+transform = Transform3D(0.3, 0, 0, 0, 0.32932398, 0, 0, 0, 0.3, 2.7938914, 0.6506604, 9.939907)
+
+[node name="entry_door" parent="door6/hinge" parent_id_path=PackedInt32Array(122039461, 139451696) index="0" unique_id=1128062760]
+interactable = false
+
+[node name="koltuk2" parent="." unique_id=1588384363 instance=ExtResource("5_lc66q")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 7.828432, 0.8211118, -0.7308494)
+
+[node name="desk" parent="." unique_id=997880225 instance=ExtResource("6_a8yms")]
+transform = Transform3D(-0.2, 0, -1.3113417e-08, 0, 0.12, 0, 1.7484556e-08, 0, -0.15, -6.5524898, 0.48825526, -3.788302)
+
+[node name="DirectionalLight3D4" type="OmniLight3D" parent="." unique_id=571568230]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.045541763, 3.7527547, -10.425506)
+light_energy = 3.0
+shadow_enabled = true
+shadow_normal_bias = 5.0
+
+[node name="DirectionalLight3D6" type="OmniLight3D" parent="." unique_id=1459647605]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.301604, 3.7527547, -2.9675932)
+light_energy = 3.0
+shadow_enabled = true
+shadow_normal_bias = 5.0
+omni_range = 18.750881
+
+[node name="DirectionalLight3D8" type="OmniLight3D" parent="." unique_id=1444928931]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 3.301604, 3.7527547, 7.1613503)
+light_energy = 3.0
+shadow_enabled = true
+shadow_normal_bias = 5.0
+
+[node name="DirectionalLight3D9" type="OmniLight3D" parent="." unique_id=1127077660]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 8.0787, 3.7527547, 0.9770721)
+light_energy = 3.0
+shadow_enabled = true
+shadow_normal_bias = 5.0
+
+[node name="DirectionalLight3D10" type="OmniLight3D" parent="." unique_id=2003740249]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 8.0787, 3.7527547, 6.965256)
+light_energy = 3.0
+shadow_enabled = true
+shadow_normal_bias = 5.0
+
+[node name="DirectionalLight3D11" type="OmniLight3D" parent="." unique_id=880437771]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 8.0787, 3.7527547, -3.6087558)
+light_energy = 3.0
+shadow_enabled = true
+shadow_normal_bias = 5.0
+
+[node name="DirectionalLight3D12" type="OmniLight3D" parent="." unique_id=1808231999]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, 8.0787, 3.7527547, -8.800996)
+light_energy = 3.0
+shadow_enabled = true
+shadow_normal_bias = 5.0
+
+[node name="DirectionalLight3D13" type="OmniLight3D" parent="." unique_id=355244716]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -6.6123037, 3.7527547, -0.62142134)
+light_energy = 3.0
+shadow_enabled = true
+shadow_normal_bias = 5.0
+
+[node name="DirectionalLight3D14" type="OmniLight3D" parent="." unique_id=828160338]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -6.6123037, 3.7527547, 8.174904)
+light_energy = 3.0
+shadow_enabled = true
+shadow_normal_bias = 5.0
+
+[node name="DirectionalLight3D15" type="OmniLight3D" parent="." unique_id=815399836]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.4791398, 3.7527547, -0.62142134)
+light_energy = 3.0
+shadow_enabled = true
+shadow_normal_bias = 5.0
+
+[node name="DirectionalLight3D16" type="OmniLight3D" parent="." unique_id=2035668609]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -0.4791398, 3.7527547, 8.174904)
+light_energy = 3.0
+shadow_enabled = true
+shadow_normal_bias = 5.0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1448691826]
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=460508591]
+offset_left = 24.0
+offset_top = 37.0
+offset_right = 64.0
+offset_bottom = 60.0
+text = "FPS"
+script = ExtResource("7_c5mqo")
+
+[node name="DirectionalLight3D3" type="OmniLight3D" parent="." unique_id=211734657]
+transform = Transform3D(1, 0, 0, 0, -4.371139e-08, 1, 0, -1, -4.371139e-08, -4.4728436, 3.7035928, -5.591479)
+light_energy = 3.0
+shadow_enabled = true
+shadow_normal_bias = 5.0
+omni_range = 9.055248
+
+[editable path="door6"]

@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://b4rre627r6pbe"]
+
+[ext_resource type="PackedScene" uid="uid://ggiye6q2k845" path="res://Assets/door_frame.glb" id="1_id5dr"]
+
+[node name="door_frame" unique_id=828458539 instance=ExtResource("1_id5dr")]

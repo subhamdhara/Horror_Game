@@ -1,0 +1,20 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://bksp3tgpl0h2m"]
+
+[ext_resource type="Texture2D" uid="uid://dur2j3ou47y0t" path="res://Assets/textures/streaky-metal1_albedo.png" id="1_7fho8"]
+[ext_resource type="Texture2D" uid="uid://chndj0y63y5nn" path="res://Assets/textures/streaky-metal1_ao.png" id="2_6lwyg"]
+[ext_resource type="Texture2D" uid="uid://b267kjp8diwm0" path="res://Assets/textures/streaky-metal1_metallic.png" id="3_wsmy8"]
+[ext_resource type="Texture2D" uid="uid://cneih3ls86ahn" path="res://Assets/textures/streaky-metal1_normal-dx.png" id="4_bxgjr"]
+[ext_resource type="Texture2D" uid="uid://deu00ad2rcb2d" path="res://Assets/textures/streaky-metal1_roughness.png" id="5_y83xd"]
+
+[resource]
+albedo_texture = ExtResource("1_7fho8")
+albedo_texture_msdf = true
+metallic = 1.0
+metallic_specular = 0.0
+metallic_texture = ExtResource("3_wsmy8")
+roughness_texture = ExtResource("5_y83xd")
+normal_enabled = true
+normal_texture = ExtResource("4_bxgjr")
+ao_enabled = true
+ao_light_affect = 1.0
+ao_texture = ExtResource("2_6lwyg")

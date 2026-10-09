@@ -1,0 +1,16 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://by50qnvjjl0jl"]
+
+[ext_resource type="Texture2D" uid="uid://cwem0q1sw8k2w" path="res://Assets/textures/textures/dark_wood_rough_4k.jpg" id="1_uoq00"]
+[ext_resource type="Texture2D" uid="uid://1rwpuuycqd8s" path="res://Assets/textures/wallpaper_19-4K/4K-walllpaper_19-normal.jpg" id="2_7e52q"]
+
+[resource]
+albedo_color = Color(0.74655354, 0.76276565, 0.71075135, 1)
+metallic_specular = 1.0
+metallic_texture = ExtResource("1_uoq00")
+roughness_texture = ExtResource("1_uoq00")
+roughness_texture_channel = 4
+normal_enabled = true
+normal_scale = 0.65
+normal_texture = ExtResource("2_7e52q")
+uv1_scale = Vector3(250, 250, 250)
+uv1_triplanar = true

@@ -1,0 +1,18 @@
+[gd_resource type="StandardMaterial3D" format=3 uid="uid://dqd25wbuc7hs3"]
+
+[ext_resource type="Texture2D" uid="uid://ca7a7npm3ns7v" path="res://Assets/textures/wallpaper_19-4K/4K-walllpaper_19-specular.jpg" id="1_1q3fa"]
+[ext_resource type="Texture2D" uid="uid://cx4733wxj4fed" path="res://Assets/textures/wallpaper_19-4K/4K-walllpaper_19-ao.jpg" id="1_rapkv"]
+[ext_resource type="Texture2D" uid="uid://1rwpuuycqd8s" path="res://Assets/textures/wallpaper_19-4K/4K-walllpaper_19-normal.jpg" id="2_rapkv"]
+
+[resource]
+albedo_color = Color(0.9406265, 0.88838226, 0.70538294, 1)
+metallic_specular = 0.0
+metallic_texture = ExtResource("1_1q3fa")
+normal_scale = 0.3
+normal_texture = ExtResource("2_rapkv")
+ao_light_affect = 1.0
+ao_texture = ExtResource("1_rapkv")
+detail_normal = ExtResource("2_rapkv")
+uv1_scale = Vector3(4, 1, 4)
+uv1_triplanar = true
+uv1_triplanar_sharpness = 1.7410986
